@@ -1,73 +1,50 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
-import Feature from '../components/Feature.astro'
-import Counter from '../components/Counter.astro'
+import CallToAction from '../components/CallToAction.astro'
 import ContentMedia from '../components/ContentMedia.astro'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
-  <section class="my-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-        </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
-        </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
-        </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
-        </Feature>
-      </div>
-    </div>
-  </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
+  <ContentMedia
+    imgSrc="/comingTogether.webp"
+    altText="4 volunteers and a small child sitting down, drinking tea and talking about how to improve Druids Heath"
+  >
+    <h2>We are coming together because we live and work in Druids Heath...</h2>
     <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
+      Our experiences of living here, the things we love, and the things we want to change have brought us together.
     </p>
   </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
+  <ContentMedia
+    imgSrc="/workWithOurNeighbours.webp"
+    reverseImg={true}
+    altText="Founder members Phil and Ollie after our first ever litterpick"
+  >
+    <h2>We work with our neighbours...</h2>
+    <p class="text-2xl"> To improve front gardens, streets and the green spaces next to them.</p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/talkTo.webp" altText="4 volunteers on a footpath in Druids Heath">
+    <h2>We talk to our neighbours...</h2>
+    <p class="text-2xl"> About what we do and what we want to do</p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/listenTo.webp" reverseImg={true}>
+    <h2>We listen to our neighbours...</h2>
+    <p class="text-2xl"> To get their ideas and try to make them happen.</p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/volunteerOurTime.webp">
+    <h2>We volunteer our time...</h2>
+    <p class="text-2xl"> To plant areas, remove rubbish, and help take care of wildlife.</p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/weDoThis.webp" reverseImg={true}>
+    <h2>We do this to...</h2>
     <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
+      <ul class="list-disc pl-5">
+        <li class="text-2xl">Reduce littering, flytipping and anti-social behaviour</li>
+        <li class="text-2xl">Improve people's well-being and feelings of personal safety</li>
+        <li class="text-2xl">Increase the area's self-sufficiency, biodiversity and sustainability.</li>
+      </ul>
     </p>
   </ContentMedia>
-  <section class="mb-32 mt-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
-      </div>
-    </div>
-  </section>
+  <CallToAction />
 </DefaultLayout>
